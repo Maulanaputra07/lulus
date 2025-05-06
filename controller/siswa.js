@@ -39,8 +39,8 @@ module.exports = {
 
 
     async store(req, res){
-        const {nis, nama, nama_ayah, nama_ibu, kelas, id_jurusan, kehadiran} = req.body;
-        const data = await siswa.store([nis, nama, nama_ayah, nama_ibu, kelas, id_jurusan, kehadiran]);
+        const {nis, nama, id_jurusan, kehadiran} = req.body;
+        const data = await siswa.store([nis, nama, id_jurusan, kehadiran]);
 
         return res.status(200).json({
             message:"berhasil insert",
